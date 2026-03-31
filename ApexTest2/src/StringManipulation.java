@@ -19,7 +19,6 @@ public class StringManipulation {
 		System.out.println("4. Number of occurances of "+ word +" in given word: " + countWord);
 
 	}
-
 	private static int countVowels(String s) {
 		int count = 0;
 		char[] vowels = {'a','e','i','o','u'};

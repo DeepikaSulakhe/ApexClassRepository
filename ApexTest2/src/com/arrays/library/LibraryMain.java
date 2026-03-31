@@ -24,8 +24,9 @@ public class LibraryMain {
 		
 		Library library = new Library("Santa Clara Library", books, 2);
 		//System.out.println(library.toString());
+		
 /*1. Library class methods implemented by considering 2 books hardcoded and book count too in library or 
- * can add using addbook method therby updating the book count */
+ * can add using addbook method therby updating the book count . Down written are all Library methods can be uncommented and run*/
  
  
 		library.addBook(b3);
@@ -50,12 +51,13 @@ public class LibraryMain {
 //		
 //		library.countAvailable();
 		
-/* Book class methods implemented in Book class based on a single book we can view any book from above b1 ,b2,b3...*/
-		
-//		Book book = new Book();
-//		book.displayInfo(b1);
-//		book.markIssued(b1);
-//		book.markReturned(b1);
+/* Down written are all Book methods can be uncommented and run.
+ * Book class methods implemented in Book class based on a single book we can view any book from above b1 ,b2,b3...*/
+		System.out.println("\n");
+		Book book = new Book();
+		book.displayInfo(b1);
+		book.markIssued(b1);
+		book.markReturned(b1);
 		
 		
 	}
