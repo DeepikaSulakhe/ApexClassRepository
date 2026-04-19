@@ -42,17 +42,11 @@ public class AddStudentServlet extends HttpServlet {
 		Student student = new Student(1,name,email,course,marks);
 		
 		
-		    int success = 0;
-			try {
-				success = service.addStudent(student);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		    String error  = null;
+			error = service.addStudent(student);
 		
-			if (success > 0) {
+			if(error != null) {
 			    response.sendRedirect(request.getContextPath() + "/listStudent");
-				//response.sendRedirect("listStudent");
 			} else {
 			    request.setAttribute("error", "insert_failed");
 			    request.getRequestDispatcher("/addStudent.jsp").forward(request, response);

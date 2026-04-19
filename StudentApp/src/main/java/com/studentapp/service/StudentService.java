@@ -15,23 +15,19 @@ public class StudentService {
 		this.studentDAO = new StudentDao();
 	}
 	
-	public int addStudent(Student student) throws SQLException {
+	public String addStudent(Student student) {
 		String error = null;
-//		try {
-//			int affectedRows = studentDAO.addStudent(student);
-//			if (affectedRows == 0) {
-//				error = "Error in inserting student object ";
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//			error = "Email is null";
-//		}
-		int affectedRows = studentDAO.addStudent(student);
-		if (affectedRows == 0) {
-			error = "Error in inserting student object ";
+		try {
+			int affectedRows = studentDAO.addStudent(student);
+			if (affectedRows == 0) {
+				error = "Error in inserting student object ";
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			error = "Email is null";
+		}
+		return error;
 		
-	}
-		return affectedRows;
 	}
 	public List<Student> getStudents() {
 		
